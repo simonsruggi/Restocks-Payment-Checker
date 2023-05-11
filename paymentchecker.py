@@ -4,12 +4,25 @@ from bs4 import BeautifulSoup
 import json
 from datetime import datetime as dt2
 import sys
+from dotenv import load_dotenv
+import os
 
-SALES_TXT_PATH = 'path of your restocks paid ids txt'
+script_directory = os.path.dirname(os.path.abspath(__file__))
 
-email = 'youremail'
+# Construct the full path to the "paid_ids.txt" file
+sales_txt_path = os.path.join(script_directory, "paid_ids.txt")
 
-password = 'yourpass'
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the email and password from environment variables
+email = os.getenv('EMAIL')
+password = os.getenv('PASSWORD')
+
+# Check if the environment variables are set
+if email is None or password is None:
+    raise ValueError('Email or password environment variables are not set.')
+
 
 restocks_headers = {
     'Host': 'restocks.net',
@@ -63,7 +76,7 @@ def login():
 def payment_mode(session):
 
     try:
-        with open(SALES_TXT_PATH, 'r') as f:
+        with open(sales_txt_path, 'r') as f:
 
             paid_ids = f.read().split('\n')
 
@@ -163,13 +176,20 @@ def payment_mode(session):
 
         else:
 
+            for s in json_sales:
+                if str(s['sale_id']) == str(paid_id):
+
+                    print('Congrats! You got your payment of {} for product {} and id {} sold on {}'.format(s['price'],s['item'],s['sale_id'],s['date']))
+            
+                    break
             try:
-                with open(SALES_TXT_PATH, 'a') as f:
+                with open(sales_txt_path, 'a') as f:
 
                     f.writelines('\n'+paid_id)
 
             except Exception as e:
-                print('Error', e)
+                print('Error', e )
+
 
 
 def main():
