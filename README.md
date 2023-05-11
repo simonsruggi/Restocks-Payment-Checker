@@ -8,7 +8,7 @@ Restocks Payment Checker is a simple tool designed to check the status of restoc
 
 2. Clone the repository to your local machine using the following command:
    ```
-   git clone https://github.com/your-username/restocks-payment-checker.git
+   git clone https://github.com/simonsruggi/restocks-payment-checker.git
    ```
 
 3. Navigate to the project directory:
