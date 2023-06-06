@@ -1,6 +1,7 @@
-# Restocks Payment Checker
+# Restocks.net Payment Checker
+Everybody know that Restocks.net is taking too long to elaborate payments, that's why I created this useful tool.
 
-Restocks Payment Checker is a simple tool designed to check the status of restocks payments. It helps you keep track of the payments you have received.
+Restocks.net Payment Checker is a simple tool designed to check the status of restocks payments. It helps you keep track of the payments you have received.
 
 ## Installation
 
