@@ -44,3 +44,7 @@ For any issues or questions, please refer to the project repository or contact t
 **Disclaimer: Use this tool responsibly and in accordance with the terms of service and policies of the restocks site. Be mindful of privacy and security considerations.**
 "
 
+
+## Support
+
+Restocks-Payment-Checker is free and open source. If you find it useful, please [⭐️ star the repo](https://github.com/simonsruggi/Restocks-Payment-Checker) — and if you'd like to support my open-source work, you can [💛 sponsor me on GitHub](https://github.com/sponsors/simonsruggi). Completely optional, always appreciated. 🙏
