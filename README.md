@@ -1,4 +1,14 @@
 # Restocks.net Payment Checker
+
+> [!NOTE]
+> **Archived — this tool no longer works.**
+>
+> Restocks.net has shut down: the domain no longer resolves and `api.restocks.net`
+> returns `523 Origin Is Unreachable`. This tool authenticates against that API to
+> read your orders, so there is nothing left for it to talk to.
+>
+> The code is kept for reference only. No further updates.
+
 Everybody know that Restocks.net is taking too long to elaborate payments, that's why I created this useful tool.
 
 Restocks.net Payment Checker is a simple tool designed to check the status of restocks payments. It helps you keep track of the payments you have received.
